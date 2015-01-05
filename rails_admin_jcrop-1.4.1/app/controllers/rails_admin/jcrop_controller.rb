@@ -21,8 +21,7 @@ module RailsAdmin
         if @object.send(@field)._storage.to_s =~ /Fog/
           @file_path=@object.send(@field).url
         else
-#          @file_path=@object.send(@field).path
-          @file_path=@object.send(@field).url
+          @file_path=@object.send(@field).path
         end
       #Condition for Paperclip.
       elsif @object.send(@field).class.to_s =~ /Paperclip/
