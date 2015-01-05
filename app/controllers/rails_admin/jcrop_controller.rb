@@ -19,10 +19,10 @@ module RailsAdmin
       #Condition for Carrierwave.
       if @object.send(@field).class.to_s =~ /Uploader/
         if @object.send(@field)._storage.to_s =~ /Fog/
-
           @file_path=@object.send(@field).url
         else
-          @file_path=@object.send(@field).path
+#          @file_path=@object.send(@field).path
+          @file_path=@object.send(@field).url
         end
       #Condition for Paperclip.
       elsif @object.send(@field).class.to_s =~ /Paperclip/
